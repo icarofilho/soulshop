@@ -1,4 +1,4 @@
-const Produto = require("../models/Produto");
+import Produto from "../models/Produto"
 
 class ProdutoController {
   static async paginaProdutos(req, res) {

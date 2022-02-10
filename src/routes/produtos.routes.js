@@ -1,5 +1,6 @@
-const { Router } = require("express");
-const ProdutoController = require("../controllers/ProdutoController");
+import { Router } from "express";
+import ProdutoController from "../app/controllers/ProdutoController"
+
 const router = Router();
 
 router.get("/produtos", ProdutoController.paginaProdutos);
