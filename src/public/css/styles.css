@@ -6,32 +6,30 @@
 }
 
 /* !MARGIN FORMS */
-.teste{
-  width: 100vw;
+.temp {
+    margin: auto;
+    width: 980px;
 }
-/* .temp{
-  margin: auto;
-  width: 980px;
+.temp-img {
+    margin: 20px auto;
+    width: 980px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.temp-img{
-  
-  margin: 20px auto;
-  width: 980px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.temp-img > div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
 }
-.temp-img>div {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
+.temp-img img {
+    width: 100%;
 }
-.temp-img img{
-
-  width: 100%;
-} */
+.img-vale{
+    height: 150px;
+}
 
 .form {
     padding: 25px;
