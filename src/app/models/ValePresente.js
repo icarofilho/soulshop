@@ -5,8 +5,8 @@ const ValePresente = model(
     new Schema({
         name: { type: String, required: true },
         price: { type: Number, required: true },
+        img_url: { type: String, required: true },
         description: { type: String, required: true },
-        quantity: { type: Number, required: true },
     })
 );
 
