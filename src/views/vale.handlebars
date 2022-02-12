@@ -1,51 +1,64 @@
-<div class="container">
-    
-    <div class="card-vele">
-        <p></p>
-        <img src="{{valepresente.img_url}}" class="img-vale" >
+<div class="text-center">
+    <h1>Vale-Presente</h1>
+    <h3>Presenteie alguém especial!</h3>
+</div>
+<div class="container-md">
+    <div class="container-md">
+        <div class="row">
+            <div class="col">
+                <p></p>
+                <img src="{{vale.img_url}}" class="img-fluid" >
+                <h4>{{vale.title}}</h4>
+                <p>R$ {{vale.price}}</p>
+                <p>{{vale.desc}}</p>
+            </div>
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Remetente</label>
+                        <input
+                            type="name"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Quem está enviando o presente"
+                        />
+                        <label for="exampleFormControlInput1">E-mail</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="name@example.com"
+                        />
+                        <label for="exampleFormControlInput1">Destinatário</label>
+                        <input
+                            type="name"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Quem vai receber o presente"
+                        />
+                        <label for="exampleFormControlInput1">E-mail</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="name@example.com"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Deixe aqui sua mensagem</label>
+                        <textarea
+                            class="form-control"
+                            id="FormControlTextarea1"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <form>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Remetente</label>
-            <input
-                type="name"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Quem está enviando o presente"
-            />
-            <label for="exampleFormControlInput1">E-mail</label>
-            <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"
-            />
-            <label for="exampleFormControlInput1">Destinatário</label>
-            <input
-                type="name"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Quem vai receber o presente"
-            />
-            <label for="exampleFormControlInput1">E-mail</label>
-            <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="name@example.com"
-            />
-        </div>
-
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Deixe aqui sua mensagem</label>
-            <textarea
-                class="form-control"
-                id="FormControlTextarea1"
-                rows="5"
-            ></textarea>
-        </div>
         <h3>Dados para pagamento</h3>
         <div class="form-group">
+            <form>
             <label for="exampleFormControlInput1">Nome</label>
             <input
                 type="name"
