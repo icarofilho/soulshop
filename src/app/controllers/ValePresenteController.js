@@ -6,10 +6,10 @@ class ValePresenteController {
     }
     static async voucher(req, res) {
         const { id } = req.params;
-        const valepresente = await ValePresente.findOne({
-            where: { id },
-        });
-        res.render("vale", { valepresente });
+        const vale = await ValePresente.findById(id).lean();
+        console.log('id=>',id)
+        console.log('obj => ',vale)
+        res.render("vale", { vale : vale });
     }
 }
 
