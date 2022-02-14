@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "6206befc7a6dd449c35d2d66"
+  },
+  "title": "Home Center",
+  "img_url": "/img/valepresentes/homecenter.png",
+  "price": 200,
+  "desc": "Cartão com valor de R$ 200,00 (duzentos reais) em desconto para utilização na compra de qualquer produto no Home Center Home Sweet Some, em qualquer unidade do Brasil, com validade até dia 31/12/2022. Apresentar cupom pelo celular a um atendente. ",
+  "id:": "1"
+},{
+  "_id": {
+    "$oid": "6206c0467a6dd449c35d2d67"
+  },
+  "title": "Steak House ",
+  "img_url": "/img/valepresentes/voucher.png",
+  "price": 150,
+  "desc": "Cartão a ser apresentado em qualquer unidade da SteakHouse no Brasil, para consumir, gratuitamente, um rodízio no jantar. Pode ser utilizado por apenas uma pessoa, das 18 às 21h. Cupom válido até dia 31/06/2022",
+  "id:": "2"
+},{
+  "_id": {
+    "$oid": "620a580e31164c707cf32f00"
+  },
+  "title": "FDS em Hotel",
+  "img_url": "/img/valepresentes/hotel.png",
+  "price": "850",
+  "desc": "Cartão que concede duas diárias em final-de-semana no Horizon Hotel, em Coapacabana - RJ. Enviar o código deste voucher para o WhatsApp de reservas do hotel. Válido até 01/10/2022.",
+  "id": "3"
+},{
+  "_id": {
+    "$oid": "620a59d031164c707cf32f01"
+  },
+  "title": "Livraria Bookshelf",
+  "img_url": "/img/valepresentes/livro.png",
+  "price": "100",
+  "desc": "Cartão de vale-compras na Livraria online Bookshelf, para adquirir produtos pelo site com valor até R$ 100,00 o total do carrinho.",
+  "id": "4"
+},{
+  "_id": {
+    "$oid": "620a5ab131164c707cf32f02"
+  },
+  "title": "Assinatura Netflix por 3 (três) meses.",
+  "img_url": "/img/valepresentes/netflix.png",
+  "price": "133",
+  "desc": "Cartão que concede 3 (três) meses de assinatura do serviço de streaming Netflix, plano padrão. O presenteado receberá o passo-a-passo do registro por e-mail.",
+  "id": "5"
+},{
+  "_id": {
+    "$oid": "620a5c0031164c707cf32f03"
+  },
+  "title": "Um dia de cuidados no Afrodite SPA.",
+  "img_url": "/img/valepresentes/spa.png",
+  "price": "300",
+  "desc": "Cartão que presenteia alguém com um dia de cuidados no Afrodite SPA, em qualquer unidade do Brasil, mediante prévio agendamento para verificar disponibilidade de data e horário. Válido até dia 21/12/2022.",
+  "id": "6"
+}]
