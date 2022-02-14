@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "6206befc7a6dd449c35d2d66"
+  },
+  "title": "Home Center",
+  "img_url": "/img/valepresentes/homecenter.png",
+  "price": 200,
+  "desc": "Cartão com valor de R$ 200,00 (duzentos reais) em desconto para utilização na compra de qualquer produto no Home Center Home Sweet Some, em qualquer unidade do Brasil, com validade até dia 31/12/2022. Apresentar cupom pelo celular a um atendente. ",
+  "id": "1"
+},{
+  "_id": {
+    "$oid": "6206c0467a6dd449c35d2d67"
+  },
+  "title": "Steak House ",
+  "img_url": "/img/valepresentes/voucher.png",
+  "price": 150,
+  "desc": "Cartão a ser apresentado em qualquer unidade da SteakHouse no Brasil, para consumir, gratuitamente, um rodízio no jantar. Pode ser utilizado por apenas uma pessoa, das 18 às 21h. Cupom válido até dia 31/06/2022",
+  "id": "2"
+}]
