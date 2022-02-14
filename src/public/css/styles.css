@@ -4,6 +4,17 @@
 }
 
 /* !MARGIN FORMS */
+.container-card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.card-max{
+    width: 400px;
+}
+.none-form{
+    display: none;
+}
 .temp {
     margin: auto;
     width: 980px;
