@@ -1,12 +1,10 @@
 * {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
     font-size: 14px;
 }
 
 /* !MARGIN FORMS */
-/* .temp {
+.temp {
     margin: auto;
     width: 980px;
 }
@@ -29,12 +27,8 @@
 }
 .img-vale{
     height: 150px;
-} */
-.none-form{
-    display: none;
-    border: none;
-    background: none;
 }
+
 .form {
     padding: 25px;
 }
@@ -51,4 +45,9 @@
 #FormControlTextarea1 {
     width: 100%;
     height: 100%;
+}
+
+.vales .card {
+    width: 400px;
+    display: inline-block;
 }

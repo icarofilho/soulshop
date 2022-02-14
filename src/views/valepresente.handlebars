@@ -1,92 +1,44 @@
 <section class="m-1">
-    <a href="/vale/novo" class="btn btn-primary">
+    <a href="/vale/novo" class="btn btn-primary mt-2">
         <i class="bi bi-plus"></i>
         Criar Vale Presente
     </a>
     <hr />
     <form method="GET">
         <input type="text" name="nomeVale" placeholder="Nome do Vale Presente" class="form-control form-control-sm" value="{{nomeVale}}" required>
-        <button class="btn btn-sm btn-dark mt-1">
-            <i class="bi bi-search">Buscar</i>
+        <button class="btn btn-sm btn-dark mt-2 ms-5">
+            <i class="bi bi-search"> Buscar</i>
         </button>
     </form>
-    <div class="row d-flex justify-content-center align-items-center m-2" style="width: 40rem;">
-        {{#each vales}}
-            <div class="card">
-                <img class="card-img-top" src={{this.img_url}} alt="">
-                <div class="card-body">
-                    <h5 class="card-title">{{this.name}} - R$ {{this.price}}</h5>
-                    <p class="card-text">{{this.description}}</p>
-                </div>
-                <div class="card-body">
-                    <a href="#" class="card-link">Eu Quero</a>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <a href="/vale/editar/{{this._id}}" class="btn btn-sm btn-warning">
-                            <i class="bi bi-pencil"></i>
-                        </a>
+    <div class="container-fluid">
+        <div class="vales d-flex flex-wrap">
+            <div class="row d-flex row-cols-2 row-cols-md-3 g-4">
+                <div class="col">
+                {{#each vales}}
+                    <div class="card ms-5">
+                        <img class="card-img-top" src={{this.img_url}} alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.title}} - R$ {{this.price}}</h5>
+                            <p class="card-text">{{this.desc}}</p>
+                            <a href="/vale/{{this._id}}" class="card-link">Eu Quero</a>
                     </div>
-                    <div>
-                        <form action="/vale/deletar" method="POST">
-                            <input name="id" type="hidden" value="{{this._id}}" />
-                                <button class="btn btn-sm btn-danger">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                        </form>
+                    <div class="card-body">
+                        <div>
+                            <a href="/vale/editar/{{this._id}}" class="btn btn-sm btn-warning">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <form action="/vale/deletar" method="POST">
+                                <input name="id" type="hidden" value="{{this._id}}" />
+                                    <button class="btn btn-sm btn-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                            </form>
+                        </div>
                     </div>
-                </div>    
-            </div>
-        {{/each}}
-    </div>
-
-    {{!-- modelo anterior --}}
-    {{!-- <div class="text-center mt-4">
-        <h1>Vale-Presente</h1>
-        <h3>Presenteie alguém especial!</h3>
-    </div>
-    <div class="container-md mt-5">
-        <div class="row justify-content-center mb-4">
-            <div class="col-md-4 col-sm-6">
-                <div>
-                    <img src="/img/valepresentes/homecenter.png" alt="" class="img-fluid" />
-                    <a href="/vale/6206befc7a6dd449c35d2d66" type="button" class="btn btn-warning container-fluid">Eu quero!</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div>
-                    <img src="/img/valepresentes/voucher.png" class="img-fluid" alt="" />
-                    <a href="/vale/6206c0467a6dd449c35d2d67" type="button" class="btn btn-warning container-fluid">Eu quero!</a>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center mb-4">
-            <div class="col-md-4 col-sm-6">
-                <div>
-                    <img src="/img/valepresentes/hotel.png" alt="" class="img-fluid"/>
-                    <a href="/vale/3" type="button" class="btn btn-warning container-fluid">Eu quero!</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div>
-                    <img src="/img/valepresentes/livro.png" alt="" class="img-fluid" />
-                    <a href="/vale/4" type="button" class="btn btn-warning container-fluid">Eu quero!</a>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center mb-4">
-            <div class="col-md-4 col-sm-6">
-                <div>
-                    <img src="/img/valepresentes/netflix.png" alt="" class="img-fluid" />
-                    <a href="/vale/5" type="button" class="btn btn-warning container-fluid">Eu quero!</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div>
-                    <img src="/img/valepresentes/spa.png" alt="" class="img-fluid" />
-                    <a href="/vale/6" type="button" class="btn btn-warning container-fluid">Eu quero!</a>
+                {{/each}}
                 </div>
             </div>
         </div>
     </div>
-</section> --}}

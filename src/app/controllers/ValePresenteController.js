@@ -22,14 +22,15 @@ class ValePresenteController {
     //método para adicionar de fato vale
     static async addVale(req, res) {
     //ler os dados do formulário
-    const {name, price, img_url, description} = req.body
+    const {title, price, img_url, desc} = req.body
+
     //cria o vale
-    const vale= ValePresente({name, price, img_url, description})
+    const vale= ValePresente({title, price, img_url, desc})
     //salva no atlas
     await vale.save();
 
     //redirevionar a rota
-    res.redirect("/vale")
+    res.redirect("vale")
 }
 
     //renderizar página de edição
@@ -45,7 +46,7 @@ class ValePresenteController {
     
         await ValePresente.findByIdAndUpdate(id, {name, price, img_url, description})
     
-        res.redirect("/vale")
+        res.render("editar_vale")
     }
 
     //método para deletar
