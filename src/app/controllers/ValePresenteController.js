@@ -19,6 +19,13 @@ class ValePresenteController {
 
         res.render("checkout", {vale, id: id, sender, receiver, message, emailSender, emailReceiver });
     }
+
+    static async finalizaCompra(req, res) {
+        const { sender, emailSender } = req.body
+        const { id } = req.params;
+        const vale = await ValePresente.findById(id).lean();
+        res.render("compra_vale", {vale, id: id, sender, emailSender} )
+    }
 }
 
 module.exports = ValePresenteController;
