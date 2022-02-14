@@ -1,0 +1,22 @@
+<h2>Editar Vale Presente</h2>
+<hr/>
+<form action="/vale/atualizar" method="POST">
+    <input name="id" type="hidden" value="{{vale._id}}" />
+     <div class="form-group">
+        <label for="name">Nome*</label>
+        <input type="text" name="name" id="name" class="form-control" value="{{vale.name}}" required />
+    </div>
+    <div class="form-group">
+        <label for="price">Preço*</label>
+        <input type="number" name="price" id="price" class="form-control" step=".1" value="{{vale.price}}" required />
+    </div>
+    <div class="form-group">
+        <label for="img_url">Imagem*</label>
+        <input type="string" name="img_url" id="img_url" class="form-control" value="{{vale.img_url}}" required />
+    </div>
+    <div class="form-group">
+        <label for="description">Descrição*</label>
+        <textarea type="string" name="description" id="description" rows="10" class="form-control" required >{{vale.description}}</textarea>
+    </div>
+    <button class="btn btn-primary mt-2">Atualizar</button>
+</form>
