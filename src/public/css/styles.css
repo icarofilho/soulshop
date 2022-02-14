@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
     font-size: 14px;
 }
 
@@ -47,4 +45,9 @@
 #FormControlTextarea1 {
     width: 100%;
     height: 100%;
+}
+
+.vales .card {
+    width: 400px;
+    display: inline-block;
 }

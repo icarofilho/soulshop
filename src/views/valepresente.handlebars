@@ -1,25 +1,28 @@
 <section class="m-1">
-    <a href="/vale/novo" class="btn btn-primary">
+    <a href="/vale/novo" class="btn btn-primary mt-2">
         <i class="bi bi-plus"></i>
         Criar Vale Presente
     </a>
     <hr />
     <form method="GET">
         <input type="text" name="nomeVale" placeholder="Nome do Vale Presente" class="form-control form-control-sm" value="{{nomeVale}}" required>
-        <button class="btn btn-sm btn-dark mt-1">
-            <i class="bi bi-search">Buscar</i>
+        <button class="btn btn-sm btn-dark mt-2 ms-5">
+            <i class="bi bi-search"> Buscar</i>
         </button>
     </form>
-    <div class="row justify-content-center align-items-center m-2" style="width: 40rem;">
         {{#each vales}}
-            <div class="card">
+        <div class="container-fluid">
+        <div class="vales d-flex flex-wrap">
+        <div class="row row-cols-2 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card ms-5">
                 <img class="card-img-top" src={{this.img_url}} alt="">
                 <div class="card-body">
-                    <h5 class="card-title">{{this.name}} - R$ {{this.price}}</h5>
-                    <p class="card-text">{{this.description}}</p>
+                    <h5 class="card-title">{{this.title}} - R$ {{this.price}}</h5>
+                    <p class="card-text">{{this.desc}}</p>
                 </div>
                 <div class="card-body">
-                    <a href="#" class="card-link">Eu Quero</a>
+                    <a href="/vale/{{this._id}}" class="card-link">Eu Quero</a>
                 </div>
                 <div class="card-body">
                     <div>
@@ -34,10 +37,13 @@
                                     <i class="bi bi-trash"></i>
                                 </button>
                         </form>
+                        </div>
                     </div>
-                </div>    
+                </div>
+            </div>
             </div>
         {{/each}}
+    </div>
     </div>
 
     {{!-- modelo anterior --}}
