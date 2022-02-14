@@ -2,13 +2,59 @@ import ValePresente from "../models/ValePresente";
 import Mensagem from "../models/Mensagem";
 
 class ValePresenteController {
-    static async mainPage(_, res) {
-        try {
-            res.render("valepresente");
-        } catch (error) {
-            res.status(500).json({ error: error.message });
+    static async mainPage(req, res) {
+        let query = {}
+        const { nomeVale } = req.query
+        //filtrar o campo de busca pelo nome e ignorar (options: i) maiusculo e minusculo
+        if(nomeVale) {
+            query = {name: { $regex: `${nomeVale}`, $options: "i" }}
         }
+         //lean dá uma simplificada no resultado do objeto
+        const vales = await ValePresente.find(query).lean()
+        res.render("valepresente", { vales, nomeVale });     
     }
+
+    //renderizar página de adição
+    static async paginaAdicionarVale(req, res) {
+        res.render("add_vale");
+    }
+
+    //método para adicionar de fato vale
+    static async addVale(req, res) {
+    //ler os dados do formulário
+    const {name, price, img_url, description} = req.body
+    //cria o vale
+    const vale= ValePresente({name, price, img_url, description})
+    //salva no atlas
+    await vale.save();
+
+    //redirevionar a rota
+    res.redirect("/vale")
+}
+
+    //renderizar página de edição
+    static async paginaEditVale(req, res) {
+        const {id} = req.params
+        const vale = await ValePresente.findById(id).lean()
+        res.render("editar_vale", { vale })
+    }
+    
+    //método para atualizar de fato o vale
+    static async editVale(req, res) {
+        const {id, name, price, img_url, description } = req.body
+    
+        await ValePresente.findByIdAndUpdate(id, {name, price, img_url, description})
+    
+        res.redirect("/vale")
+    }
+
+    //método para deletar
+    static async deleteVale(req, res) {
+        const { id } = req.body;
+        await ValePresente.findByIdAndDelete(id)
+        res.redirect("/vale")
+    }
+
     static async voucher(req, res) {
         try{
             const { id } = req.params;
