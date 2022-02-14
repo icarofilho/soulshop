@@ -6,7 +6,7 @@
 }
 
 /* !MARGIN FORMS */
-.temp {
+/* .temp {
     margin: auto;
     width: 980px;
 }
@@ -29,8 +29,12 @@
 }
 .img-vale{
     height: 150px;
+} */
+.none-form{
+    display: none;
+    border: none;
+    background: none;
 }
-
 .form {
     padding: 25px;
 }
