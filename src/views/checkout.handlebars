@@ -7,7 +7,7 @@
         <form action="/vale/{{id}}/checkout/compra_vale" method="POST">
             <div class="row d-flex justify-content-center m-4">
                 <div class="col-lg-3 col-xs-10">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card-fluid">
                         <img
                             src="{{vale.img_url}}"
                             class="card-img-top"
@@ -17,20 +17,22 @@
                             <p class="card-title fs-4 fw-bold">{{vale.title}}
                                 <span class="card-text">R$ {{vale.price}}</span>
                             </p>
-                                {{!-- <legend>Remetente</legend> --}}
-                                <input class="none-form"
-                                    type="text"
-                                    name="sender"
-                                    value="{{sender}}"
-                                    readonly
-                                />
-                                <input class="none-form"
-                                    type="text"
-                                    name="emailSender"
-                                    value="{{emailSender}}"
-                                    readonly
-                                />
-                                
+                            {{! <legend>Remetente</legend> }}
+                            <input
+                                class="none-form"
+                                type="text"
+                                name="sender"
+                                value="{{sender}}"
+                                readonly
+                            />
+                            <input
+                                class="none-form"
+                                type="text"
+                                name="emailSender"
+                                value="{{emailSender}}"
+                                readonly
+                            />
+
                             <p>De: {{sender}} - {{emailSender}}</p>
                             {{!-- <p>{{emailSender}}</p> --}}
                             <p>Para: {{receiver}} - {{emailReceiver}}</p>
@@ -57,6 +59,31 @@
                             placeholder="Email de contato"
                             name="payment_email"
                         />
+                        <label for="exampleFormControlInput1">Endereço</label>
+                        <input
+                            type="address"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Endereço de cobrança"
+                            name="payment_tel"
+                        />
+                        <label for="exampleFormControlInput1">CPF</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="CPF do titular do pagamento"
+                            name="payment_cpf"
+                        />
+                        <label for="exampleFormControlInput1">Telefone</label>
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="exampleFormControlInput1"
+                            placeholder="Telefone de contato"
+                            name="payment_tel"
+                        />
+
                         <label for="exampleFormControlSelect1">Forma de
                             pagamento</label>
                         {{! <select class="form-control" id="exampleFormControlSelect1"> }}
@@ -69,7 +96,10 @@
                             <option>À vista no boleto bancário</option>
                             <option>Parcelado no cartão de crédito</option>
                         </select>
-                        <button type="submit" class="btn btn-dark mt-2">Avançar</button>
+                        <button
+                            type="submit"
+                            class="btn btn-dark mt-2"
+                        >Avançar</button>
                     </div>
                 </div>
             </div>
