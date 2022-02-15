@@ -1,11 +1,20 @@
 * {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
     font-size: 14px;
 }
 
 /* !MARGIN FORMS */
+.container-card{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.card-max{
+    width: 400px;
+}
+.none-form{
+    display: none;
+}
 .temp {
     margin: auto;
     width: 980px;
@@ -47,4 +56,9 @@
 #FormControlTextarea1 {
     width: 100%;
     height: 100%;
+}
+
+.vales .card {
+    width: 400px;
+    display: inline-block;
 }

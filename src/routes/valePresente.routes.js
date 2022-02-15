@@ -5,7 +5,8 @@ const router = Router();
 
 router.get("/vale", ValePresenteController.mainPage);
 router.get("/vale/novo", ValePresenteController.paginaAdicionarVale);
-router.post("/vale/atualizar", ValePresenteController.editVale);
+router.get("/vale/editar/:id", ValePresenteController.paginaEditVale);
+router.post("/vale/editar/", ValePresenteController.editVale);
 router.post("/vale/enviar", ValePresenteController.addVale);
 router.post("/vale/deletar", ValePresenteController.deleteVale);
 router.get("/vale/:id", ValePresenteController.voucher);
